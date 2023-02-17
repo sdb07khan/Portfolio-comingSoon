@@ -60,6 +60,15 @@ body {
   transform: translateX(100vw);
 }
 
+header {
+  display: inline-block;
+}
+@media only screen and (max-width: 60em) {
+  header {
+    display: inline;
+    align-items: center;
+  }
+}
 header nav {
   padding: 3rem 7rem;
 }
