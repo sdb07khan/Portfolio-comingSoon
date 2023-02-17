@@ -67,6 +67,13 @@ header {
   header {
     display: inline;
     align-items: center;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  header {
+    position: fixed;
+    z-index: 5;
   }
 }
 header nav {
@@ -100,6 +107,18 @@ header nav .name {
 @media only screen and (max-width: 60em) {
   .comingSoon .left {
     margin-top: 5rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .left {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+    overflow-x: hidden;
+    margin-top: 15rem;
   }
 }
 .comingSoon .left .timerHead {
@@ -146,6 +165,7 @@ header nav .name {
 @media only screen and (max-width: 31.25em) {
   .comingSoon .left .notifyForm {
     justify-content: flex-start;
+    width: 120%;
   }
 }
 .comingSoon .left .notifyForm .inputBox {
@@ -221,6 +241,11 @@ header nav .name {
 @media only screen and (max-width: 60em) {
   .comingSoon .right {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .right {
+    padding: 5rem 0;
   }
 }
 @media only screen and (max-width: 60em) {
@@ -328,7 +353,7 @@ header nav .name {
 @media only screen and (max-width: 31.25em) {
   .wrapperBox {
     width: 80vw;
-    height: 120vh;
+    gap: 6rem;
   }
 }
 .wrapperBox .closeWrapper {
@@ -358,7 +383,7 @@ header nav .name {
 }
 @media only screen and (max-width: 31.25em) {
   .wrapperBox .headWrapper {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .wrapperBox .headWrapper::after {

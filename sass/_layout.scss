@@ -4,6 +4,12 @@ header {
   @media only screen and (max-width: $bp-medium) {
     display: inline;
     align-items: center;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    position: fixed;
+    z-index: 5;
   }
 
   nav {
@@ -37,6 +43,17 @@ header {
 
     @media only screen and (max-width: $bp-medium) {
       margin-top: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-left: 1rem;
+      overflow-x: hidden;
+      margin-top: 15rem;
     }
 
     .timerHead {
@@ -85,6 +102,7 @@ header {
 
       @media only screen and (max-width: $bp-small) {
         justify-content: flex-start;
+        width: 120%;
       }
 
       .inputBox {
@@ -180,6 +198,10 @@ header {
 
     @media only screen and (max-width: $bp-medium) {
       text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 0;
     }
 
     .contentBox {
@@ -296,7 +318,7 @@ header {
 
   @media only screen and (max-width: $bp-small) {
     width: 80vw;
-    height: 120vh;
+    gap: 6rem;
   }
 
   .closeWrapper {
@@ -327,7 +349,7 @@ header {
     position: relative;
 
     @media only screen and (max-width: $bp-small) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
 
     &::after {
