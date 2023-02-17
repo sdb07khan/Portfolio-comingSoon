@@ -10,6 +10,7 @@ header {
   @media only screen and (max-width: $bp-small) {
     position: fixed;
     z-index: 5;
+    background-color: #181818;
   }
 
   nav {
@@ -73,6 +74,10 @@ header {
         justify-content: center;
         align-items: center;
         padding-right: 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+          padding-right: 1.5rem;
+        }
 
         .timeNum {
           font-size: 5.8rem;
