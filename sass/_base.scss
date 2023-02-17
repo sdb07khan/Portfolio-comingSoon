@@ -35,8 +35,7 @@ Grey dark 3: #999
 }
 
 $bp-medium: 60em; // 955px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
+$bp-small: 31.25em; // 500px
 
 * {
   margin: 0;
@@ -52,10 +51,6 @@ $bp-smallest: 31.25em; // 500px
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px
-
-  @media only screen and (max-width: $bp-medium) {
-    font-size: 62.5%;
-  }
 }
 
 body {

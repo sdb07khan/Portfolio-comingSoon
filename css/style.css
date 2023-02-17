@@ -44,11 +44,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
-@media only screen and (max-width: 60em) {
-  html {
-    font-size: 62.5%;
-  }
-}
 
 body {
   font-family: "Space Mono", monospace;
@@ -62,12 +57,9 @@ body {
 }
 
 .wrapperBox.closeWrapper {
-  transform: translateX(47vw);
+  transform: translateX(100vw);
 }
 
-header {
-  display: inline-block;
-}
 header nav {
   padding: 3rem 7rem;
 }
@@ -77,16 +69,29 @@ header nav .name {
   color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .comingSoon {
   display: flex;
-  gap: 15rem;
+  gap: 12vw;
+}
+@media only screen and (max-width: 60em) {
+  .comingSoon {
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+  }
 }
 .comingSoon .left {
   margin-top: 8rem;
   margin-left: 7rem;
-  width: 40vw;
+  max-width: 60rem;
+}
+@media only screen and (max-width: 60em) {
+  .comingSoon .left {
+    margin-top: 5rem;
+  }
 }
 .comingSoon .left .timerHead {
   font-family: "Space Mono", monospace;
@@ -108,6 +113,11 @@ header nav .name {
 .comingSoon .left .timerBox .timer .timeNum {
   font-size: 5.8rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .left .timerBox .timer .timeNum {
+    font-size: 4rem;
+  }
+}
 .comingSoon .left .timerBox .timer .timeDes {
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -118,6 +128,16 @@ header nav .name {
   margin-top: 5rem;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 60em) {
+  .comingSoon .left .notifyForm {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .left .notifyForm {
+    justify-content: flex-start;
+  }
 }
 .comingSoon .left .notifyForm .inputBox {
   display: inline-block;
@@ -186,8 +206,20 @@ header nav .name {
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  width: 32vw;
+  max-width: 40rem;
   font-family: "Space Mono", monospace;
+}
+@media only screen and (max-width: 60em) {
+  .comingSoon .right {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 60em) {
+  .comingSoon .right .contentBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .comingSoon .right .contentBox p {
   font-size: 1.6rem;
@@ -275,8 +307,20 @@ header nav .name {
   gap: 2rem;
   padding: 5vw 10vw;
   z-index: 10;
-  transform: translateX(47vw);
+  transform: translateX(100vw);
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media only screen and (max-width: 60em) {
+  .wrapperBox {
+    width: 60vw;
+    gap: 8rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .wrapperBox {
+    width: 80vw;
+    height: 120vh;
+  }
 }
 .wrapperBox .closeWrapper {
   outline: none;
@@ -303,6 +347,11 @@ header nav .name {
   font-size: 6rem;
   position: relative;
 }
+@media only screen and (max-width: 31.25em) {
+  .wrapperBox .headWrapper {
+    font-size: 4rem;
+  }
+}
 .wrapperBox .headWrapper::after {
   content: " ";
   position: absolute;
@@ -314,11 +363,32 @@ header nav .name {
   background-color: #ffbf00;
   display: block;
 }
+@media only screen and (max-width: 60em) {
+  .wrapperBox .headWrapper::after {
+    top: 3.2rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .wrapperBox .headWrapper::after {
+    top: 2rem;
+  }
+}
 .wrapperBox .formWrapper {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   width: 25vw;
+}
+@media only screen and (max-width: 60em) {
+  .wrapperBox .formWrapper {
+    width: 40vw;
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .wrapperBox .formWrapper {
+    width: 55vw;
+  }
 }
 .wrapperBox .formWrapper .inputLabel {
   display: flex;
