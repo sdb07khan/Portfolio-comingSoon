@@ -57,20 +57,6 @@ document.addEventListener("click", (e) => {
       document.body.classList.remove("open");
     }
   }
-
-  //   if (
-  //     wrapperBox.contains(e.target) &&
-  //     document.body.classList.contains("open")
-  //   ) {
-  //     console.log("Clicked inside wrapper and  wrapper is open");
-  //   }
-  //   if (!e.target.classList.contains("openWrapper")) {
-  //     wrapperBox.classList.remove("openWrapper");
-  //   }
-
-  //   if (e.target.classList.contains("openWrapper")) {
-  //     console.log(e.target);
-  //   }
 });
 
 // Wrapper open close HIGHLIGHT
