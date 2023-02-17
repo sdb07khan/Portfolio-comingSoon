@@ -80,6 +80,11 @@ header {
 header nav {
   padding: 3rem 7rem;
 }
+@media only screen and (max-width: 31.25em) {
+  header nav {
+    padding: 1.5rem 7rem;
+  }
+}
 header nav .name {
   font-family: "Space Mono", monospace;
   font-size: 3rem;
@@ -251,7 +256,7 @@ header nav .name {
 }
 @media only screen and (max-width: 31.25em) {
   .comingSoon .right {
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
 }
 @media only screen and (max-width: 60em) {

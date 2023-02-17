@@ -16,6 +16,10 @@ header {
   nav {
     padding: 3rem 7rem;
 
+    @media only screen and (max-width: $bp-small) {
+      padding: 1.5rem 7rem;
+    }
+
     .name {
       font-family: "Space Mono", monospace;
       font-size: 3rem;
@@ -206,7 +210,7 @@ header {
     }
 
     @media only screen and (max-width: $bp-small) {
-      padding: 5rem 0;
+      padding: 2rem 0;
     }
 
     .contentBox {
