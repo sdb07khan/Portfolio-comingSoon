@@ -61,24 +61,26 @@ body {
 }
 
 header {
-  display: inline-block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: #000;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   header {
-    display: inline;
-    align-items: center;
-    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 31.25em) {
   header {
-    position: fixed;
-    z-index: 5;
-    background-color: #181818;
+    width: 100vw;
   }
 }
 header nav {
-  padding: 3rem 7rem;
+  padding: 1.5vw 5vw;
 }
 @media only screen and (max-width: 31.25em) {
   header nav {
@@ -91,45 +93,53 @@ header nav .name {
   color: #fff;
   font-weight: 700;
   letter-spacing: 1px;
-  text-align: center;
+  text-align: start;
 }
 
 .comingSoon {
   display: flex;
-  gap: 12vw;
+  justify-content: space-between;
+  padding: 6vw 5vw;
+  min-height: 100vh;
+  overflow: hidden;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .comingSoon {
     flex-direction: column;
     align-items: center;
     gap: 8rem;
   }
 }
-.comingSoon .left {
-  margin-top: 8rem;
-  margin-left: 7rem;
-  max-width: 60rem;
+@media only screen and (max-width: 65.625em) {
+  .comingSoon {
+    gap: 3rem;
+  }
 }
-@media only screen and (max-width: 60em) {
+.comingSoon .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: calc(50% - 2.5vw);
+}
+@media only screen and (max-width: 65.625em) {
   .comingSoon .left {
     margin-top: 5rem;
+    width: auto;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .comingSoon .left {
     width: 90vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 1rem;
-    overflow-x: hidden;
-    margin-top: 15rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
   }
 }
 .comingSoon .left .timerHead {
   font-family: "Space Mono", monospace;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #fff;
   font-weight: 400;
   text-transform: uppercase;
@@ -168,21 +178,30 @@ header nav .name {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .comingSoon .left .notifyForm {
     justify-content: center;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .comingSoon .left .notifyForm {
-    justify-content: flex-start;
-    width: 120%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    gap: 1.2rem;
   }
 }
 .comingSoon .left .notifyForm .inputBox {
   display: inline-block;
   position: relative;
-  width: 55%;
+  min-width: 28rem;
+  width: 100%;
+}
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .left .notifyForm .inputBox {
+    width: 100%;
+  }
 }
 .comingSoon .left .notifyForm .inputBox::after {
   content: " ";
@@ -242,28 +261,51 @@ header nav .name {
   background-color: #fce22a;
   letter-spacing: 0.05rem;
 }
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .left .notifyForm .notifyBtn {
+    margin-left: 0;
+  }
+}
 .comingSoon .right {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 8rem;
-  max-width: 40rem;
+  width: calc(45% - 2.5vw);
   font-family: "Space Mono", monospace;
+  padding-right: 7.5%;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .comingSoon .right {
     text-align: center;
+    width: 75%;
+    align-items: center;
+    padding-right: 0;
+    gap: 5rem;
+    margin-top: 4rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .comingSoon .right {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    width: 90%;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 0;
   }
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .comingSoon .right .contentBox {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .comingSoon .right .contentBox {
+    width: 100%;
+    text-align: start;
+    align-items: normal;
   }
 }
 .comingSoon .right .contentBox p {
@@ -333,9 +375,15 @@ header nav .name {
 .comingSoon .right .contentBox .emailLink {
   font-size: 1.8rem;
   text-decoration: none;
-  color: blue;
+  color: #1f6bff;
   text-decoration: underline;
   font-weight: 400;
+  display: block;
+  transition: all 0.3s;
+}
+.comingSoon .right .contentBox .emailLink:hover {
+  transform: scaleX(1.05);
+  transform-origin: left;
 }
 
 .wrapperBox {
@@ -350,12 +398,12 @@ header nav .name {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
-  padding: 5vw 10vw;
+  padding: 4vw 10vw;
   z-index: 10;
   transform: translateX(100vw);
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .wrapperBox {
     width: 60vw;
     gap: 8rem;
@@ -373,24 +421,36 @@ header nav .name {
   padding: 1.5rem;
   font-family: inherit;
   font-size: 1.6rem;
-  color: #a5a1a1;
+  color: #fff;
+  opacity: 0.6;
   background-color: inherit;
   letter-spacing: 0.1rem;
   display: flex;
   align-items: center;
   margin-left: -3.5rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.wrapperBox .closeWrapper:hover {
+  opacity: 1;
+}
+.wrapperBox .closeWrapper:hover svg {
+  opacity: 1;
+  transform: translateX(-3px);
 }
 .wrapperBox .closeWrapper svg {
   height: 1.3rem;
   width: 1.3rem;
-  fill: #a5a1a1;
-  margin-right: 1rem;
+  fill: #fff;
+  filter: brightness(1.5);
+  margin-right: 0.6rem;
+  transition: all 0.3s;
 }
 .wrapperBox .headWrapper {
   font-family: inherit;
   font-size: 6rem;
   position: relative;
+  white-space: nowrap;
 }
 @media only screen and (max-width: 31.25em) {
   .wrapperBox .headWrapper {
@@ -408,14 +468,14 @@ header nav .name {
   background-color: #ffbf00;
   display: block;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .wrapperBox .headWrapper::after {
     top: 3.2rem;
   }
 }
 @media only screen and (max-width: 31.25em) {
   .wrapperBox .headWrapper::after {
-    top: 2rem;
+    top: 1.8rem;
   }
 }
 .wrapperBox .formWrapper {
@@ -424,7 +484,7 @@ header nav .name {
   gap: 2.5rem;
   width: 25vw;
 }
-@media only screen and (max-width: 60em) {
+@media only screen and (max-width: 65.625em) {
   .wrapperBox .formWrapper {
     width: 40vw;
     gap: 5rem;
@@ -469,12 +529,15 @@ header nav .name {
   display: block;
 }
 .wrapperBox .formWrapper .inputLabel .inputSpan .inputField {
+  font-family: "Space Mono", monospace;
+  font-size: 1.4rem;
   outline: none;
   border: none;
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.8rem 0;
   margin-top: 1rem;
   background-color: inherit;
+  color: #fff;
 }
 .wrapperBox .formWrapper .inputLabel .inputSpan .inputField:focus {
   background-color: #191919;
