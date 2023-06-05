@@ -8,7 +8,7 @@ const timerBox = document.querySelector(".timerBox");
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // Count Down Timer HIGHLIGHT
 const now = new Date().getTime();
-let launchDate = new Date("May 5, 2023 10:01:01").getTime();
+let launchDate = new Date("July 7, 2023 10:01:01").getTime();
 let distance = launchDate - now;
 let timer;
 
